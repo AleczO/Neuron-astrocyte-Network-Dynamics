@@ -89,26 +89,32 @@ class RL():
 
 
         
-    def train(self, A_samples):
+    def train(self, arm_samples):
         self.model.train()
-        rSeq = []
-        R_T
+        regret_rec = np.array([])
+        expected_reward = 0
+        cumulative_regret = 0
+
+
+
+        state = None
         
-        avg_revards = 0
-        loss = 0
-
+        avg_rewards = 0
+        L = 0
         
+        for t in range(arm_samples.size()):
 
-        for t in range(T):
+            L += (avg_rewards - reward) * 
 
-            loss += (r_i - r_w)
-            
+
+
+            L.backward()
             self.optimizer.zero_grad()
-            loss.backward()
+            
 
         return
     
-    def MAB(self, T):
+    def (self, T):
         
         state = torch.ones(1).unsqueeze
 
